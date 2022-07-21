@@ -9,13 +9,14 @@ public class LevelSwitcher : MonoBehaviour
     [SerializeField] private float _restartLevelDelay = 2.5f;
 
     private GameSaver _saver;
+
     private int _currentScene;
    
 
     private void Start()
     {
         _currentScene = SceneManager.GetActiveScene().buildIndex;
-        _saver = FindObjectOfType<GameSaver>();
+        _saver = GetComponent<GameSaver>();
     }
 
     public IEnumerator LoadNextLevel()
@@ -25,10 +26,7 @@ public class LevelSwitcher : MonoBehaviour
         if(SceneManager.GetActiveScene().buildIndex == LevelLocker.UnlockedLevelCount)
         {
             LevelLocker.UnlockedLevelCount++;
-            //_saver.SaveGame();
-            PlayerPrefs.SetInt("SavedLevels", LevelLocker.UnlockedLevelCount);
-            PlayerPrefs.Save();
-            Debug.Log("Game data saved!");
+            _saver.SaveGame();
         }
 
         if (_currentScene + 1 < SceneManager.sceneCountInBuildSettings)

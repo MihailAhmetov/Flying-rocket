@@ -393,7 +393,6 @@ GameObject:
   - component: {fileID: 6688544331654386443}
   - component: {fileID: 6688544331654386436}
   - component: {fileID: 7912506859705032060}
-  - component: {fileID: 6846857427285088522}
   - component: {fileID: 7582994753700356628}
   - component: {fileID: 8036866121851109515}
   m_Layer: 0
@@ -460,6 +459,7 @@ MonoBehaviour:
   _deathAudio: {fileID: 8300000, guid: 9006f8afe8407184d96c0f9d9bb10aa1, type: 3}
   _successVFX: {fileID: 8266084395799394735}
   _deathVFX: {fileID: 6365335780418630943}
+  _levelSwitcher: {fileID: 0}
 --- !u!82 &7912506859705032060
 AudioSource:
   m_ObjectHideFlags: 0
@@ -556,20 +556,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &6846857427285088522
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6688544331654386438}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 85c43b92a4eb5114eb433b6dd211fe55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _nextLevelDelay: 1
-  _restartLevelDelay: 2.5
 --- !u!114 &7582994753700356628
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class GameLoader : MonoBehaviour
 {
-    private void Awake()
+    private void Start()
     {
-        LoadGame();    
+        LoadGame();
     }
 
     public void LoadGame()
     {
-        if (PlayerPrefs.HasKey("SavedInteger"))
+        if (PlayerPrefs.HasKey("SavedLevels"))
         {
             LevelLocker.UnlockedLevelCount = PlayerPrefs.GetInt("SavedLevels");
             Debug.Log("Game data loaded!");

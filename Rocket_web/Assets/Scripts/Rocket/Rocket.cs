@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(LevelSwitcher))]
 [RequireComponent(typeof(AudioSource))]
 public class Rocket : MonoBehaviour
 {
@@ -14,8 +13,9 @@ public class Rocket : MonoBehaviour
     [SerializeField] private ParticleSystem _successVFX;
     [SerializeField] private ParticleSystem _deathVFX;
 
+    [SerializeField] private LevelSwitcher _levelSwitcher;
+
     private AudioSource _audioSource;
-    private LevelSwitcher _levelSwitcher;
 
     public bool InTransition { get; private set; }
 
