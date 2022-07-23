@@ -23,8 +23,11 @@ public class RocketMover : MonoBehaviour
     public void Boost()
     {
         _rigidBody.AddRelativeForce(Vector3.up * _boostPower * Time.deltaTime);
+
         _audioSource.volume = 1;
-        if (!_engineVFX.isPlaying) _engineVFX.Play();
+
+        if (!_engineVFX.isPlaying) 
+            _engineVFX.Play();
     }
 
     public void Stop()

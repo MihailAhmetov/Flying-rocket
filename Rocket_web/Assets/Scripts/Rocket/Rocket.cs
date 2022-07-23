@@ -5,8 +5,6 @@ using UnityEngine;
 [RequireComponent(typeof(AudioSource))]
 public class Rocket : MonoBehaviour
 {
-    [SerializeField] private float _boostPower = 1000f;
-    [SerializeField] private float _rotationSpeed = 300f;
     [SerializeField] private AudioClip _successAudio;
     [SerializeField] private AudioClip _deathAudio;
 
@@ -16,12 +14,12 @@ public class Rocket : MonoBehaviour
     [SerializeField] private LevelSwitcher _levelSwitcher;
 
     private AudioSource _audioSource;
+    private RocketMover _mover;
 
     public bool InTransition { get; private set; }
 
     private void Start()
     {
-      
         _levelSwitcher = FindObjectOfType<LevelSwitcher>();
         _audioSource = GetComponent<AudioSource>();
         _audioSource.volume = 0;
