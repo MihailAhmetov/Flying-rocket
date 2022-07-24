@@ -453,12 +453,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be4af61521aa4d849add863a5d8683b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _boostPower: 1000
-  _rotationSpeed: 300
   _successAudio: {fileID: 8300000, guid: 8ef715bf7436eaf4b84dbb93698a44a6, type: 3}
   _deathAudio: {fileID: 8300000, guid: 9006f8afe8407184d96c0f9d9bb10aa1, type: 3}
   _successVFX: {fileID: 8266084395799394735}
   _deathVFX: {fileID: 6365335780418630943}
+  _engineVFX: {fileID: 6688544330601669498}
   _levelSwitcher: {fileID: 0}
 --- !u!82 &7912506859705032060
 AudioSource:
@@ -570,7 +569,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _boostPower: 1000
   _rotationSpeed: 300
-  _engineVFX: {fileID: 6688544330601669498}
 --- !u!114 &8036866121851109515
 MonoBehaviour:
   m_ObjectHideFlags: 0

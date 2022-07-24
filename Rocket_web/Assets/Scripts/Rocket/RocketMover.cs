@@ -5,11 +5,14 @@ using UnityEngine;
 
 [RequireComponent(typeof(AudioSource))]
 [RequireComponent(typeof(Rigidbody))]
+[RequireComponent(typeof(Rocket))]
 public class RocketMover : MonoBehaviour
 {
     [SerializeField] private float _boostPower = 1000f;
     [SerializeField] private float _rotationSpeed = 300f;
-    [SerializeField] private ParticleSystem _engineVFX;
+    //[SerializeField] private ParticleSystem _engineVFX;
+
+    private Rocket _rocket;
 
     private Rigidbody _rigidBody;
     private AudioSource _audioSource;
@@ -18,6 +21,7 @@ public class RocketMover : MonoBehaviour
     {
         _audioSource = GetComponent<AudioSource>();
         _rigidBody = GetComponent<Rigidbody>();
+        _rocket = GetComponent<Rocket>();
     }
 
     public void Boost()
@@ -26,14 +30,15 @@ public class RocketMover : MonoBehaviour
 
         _audioSource.volume = 1;
 
-        if (!_engineVFX.isPlaying) 
-            _engineVFX.Play();
+        if (!_rocket.EngineVFX.isPlaying)
+            //_engineVFX.Play();
+            _rocket.EngineVFX.Play();
     }
 
     public void Stop()
     {
         _audioSource.volume = 0;
-        _engineVFX.Stop();
+        _rocket.EngineVFX.Stop();
     }
 
     public void Rotate()
