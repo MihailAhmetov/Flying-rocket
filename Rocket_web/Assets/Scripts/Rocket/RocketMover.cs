@@ -10,7 +10,6 @@ public class RocketMover : MonoBehaviour
 {
     [SerializeField] private float _boostPower = 1000f;
     [SerializeField] private float _rotationSpeed = 300f;
-    //[SerializeField] private ParticleSystem _engineVFX;
 
     private Rocket _rocket;
 
@@ -31,7 +30,6 @@ public class RocketMover : MonoBehaviour
         _audioSource.volume = 1;
 
         if (!_rocket.EngineVFX.isPlaying)
-            //_engineVFX.Play();
             _rocket.EngineVFX.Play();
     }
 

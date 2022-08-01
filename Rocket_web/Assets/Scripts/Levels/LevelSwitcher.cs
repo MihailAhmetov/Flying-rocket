@@ -5,13 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class LevelSwitcher : MonoBehaviour
 {
-    [SerializeField] private float _nextLevelDelay = 1f;
-    [SerializeField] private float _restartLevelDelay = 2.5f;
+    [SerializeField] private float _nextLevelDelay = 2.5f;
+    [SerializeField] private float _restartLevelDelay = 1.5f;
 
     private GameSaver _saver;
 
     private int _currentScene;
-   
 
     private void Start()
     {
